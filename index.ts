@@ -8,45 +8,49 @@ process.loadEnvFile();
 const browser = await webkit.launch();
 
 cron.schedule("* * * * *", async () => {
-  const page = await browser.newPage();
-
-  await page.goto(
-    "https://www.cgeonline.com.ar/informacion/apertura-de-citas.html"
-  );
-
-  const table = page.locator("table");
-
-  const pasaporteRow = table
-    .getByText("renovación y primera vez")
-    .locator("..")
-    .locator("..")
-    .locator("td:nth-child(3)");
-
-  const nextDate = await pasaporteRow.innerText();
-
-  const [date, time] = nextDate.split(" a las ");
-
-  const parseDate = parse(`${date} ${time}`, "DD/MM/YYYY hh:mm");
-  console.log(`${parseDate}`);
-
-  if (isAfter(parseDate, new Date())) {
-    logger.info(`Enviando Mensaje de Telegram...`);
-    await fetch(
-      `https://api.telegram.org/bot${
-        process.env.TELEGRAM_key
-      }/sendMessage?chat_id=@NenuBotRMG&text=${encodeURIComponent(
-        `🚨🚨 La pagina del consulado Español acaba de publicar que la proxima apertura de fechas para pasaportes es el: 
-  
-    📍 ${parseDate}. 
-
-☣️ Fueron avisados por NenuBot 🤖`
-      )}`
+  try {
+    const page = await browser.newPage();
+    await page.goto(
+      "https://www.cgeonline.com.ar/informacion/apertura-de-citas.html"
     );
-    logger.info(`Mensaje de Telegram Enviado!`);
-  } else {
-    logger.info("No hay nuevos turnos");
+
+    const table = page.locator("table");
+    const pasaporteRow = table
+      .getByText("renovación y primera vez")
+      .locator("..")
+      .locator("..")
+      .locator("td:nth-child(3)");
+
+    const nextDate = await pasaporteRow.innerText();
+
+    if (!nextDate) {
+      logger.warn("No se encontró fecha en la tabla.");
+      return;
+    }
+
+    const [date, time] = nextDate.split(" a las ");
+    const parsedDate = parse(`${date} ${time}`, "DD/MM/YYYY hh:mm");
+
+    console.log(`${parsedDate}`);
+
+    if (isAfter(parsedDate, new Date())) {
+      logger.info("Enviando mensaje de Telegram...");
+      await fetch(
+        `https://api.telegram.org/bot${
+          process.env.TELEGRAM_key
+        }/sendMessage?chat_id=@NenuBotRMG&text=${encodeURIComponent(
+          `🚨🚨 La página del consulado Español acaba de publicar que la próxima apertura de fechas para pasaportes es el: 📍 ${parsedDate}. ☣️ Fueron avisados por NenuBot 🤖`
+        )}`
+      );
+      logger.info("Mensaje de Telegram enviado.");
+    } else {
+      logger.info("No hay nuevos turnos.");
+    }
+
+    await page.close();
+  } catch (error) {
+    logger.error(`Error en la ejecución del bot: ${error.message}`);
   }
-  page.close();
 });
 
 //browser.close();
