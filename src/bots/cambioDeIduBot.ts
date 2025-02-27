@@ -34,7 +34,7 @@ Los IDU's habilitados van hasta el: ${idu}.
         logger.info("Mensaje de Telegram enviado.");
         logger.info("CAMBIAR IDUHARDCODEADO");
       } else {
-        logger.info("No hubo cambios de IDU's habilitados");
+        logger.info("No hay cambios de IDU's habilitados en la web.");
       }
 
       await page.close();

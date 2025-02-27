@@ -40,9 +40,8 @@ export function turnoPasaporteWebBot() {
 
       const parsedDate = parse(`${lastDate}`, "DD/MM/YYYY");
 
-      formatDateLATAM(`${parsedDate}`);
-
       if (text !== "fecha por confirmar") {
+        formatDateLATAM(`${parsedDate}`);
         logger.info("Enviando mensaje de Telegram...");
         await fetch(
           `https://api.telegram.org/bot${
@@ -54,7 +53,9 @@ export function turnoPasaporteWebBot() {
         );
         logger.info("Mensaje de Telegram enviado.");
       } else {
-        logger.info("No hay nuevos turnos.");
+        logger.info(
+          "No hay nuevos turnos para pasaporte habilitados en la web."
+        );
       }
 
       await page.close();

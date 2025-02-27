@@ -57,6 +57,6 @@ export function formatDateLATAM(date) {
   const latamDia = obtenerDiaSemana(dia);
   const latamMes = obtenerMes(mes);
   logger.info(
-    `La ultima fecha abierta fue el ${latamDia}, ${fecha} de ${latamMes} del ${anio}`
+    `La ultima fecha abierta para Pasaportes fue el ${latamDia}, ${fecha} de ${latamMes} del ${anio}.`
   );
 }
