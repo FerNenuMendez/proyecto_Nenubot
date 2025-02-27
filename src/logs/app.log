@@ -151,3 +151,48 @@
 27-02-25 01:39 [32minfo[39m: No hay nuevos turnos.
 27-02-25 01:40 [32minfo[39m: La ultima fecha abierta fue el Jueves, 30 de Enero del 2025
 27-02-25 01:40 [32minfo[39m: No hay nuevos turnos.
+27-02-25 02:22 [31merror[39m: Error en la ejecución del bot: locator.innerText: Error: strict mode violation: locator('strong.ms-rteForeColor-8') resolved to 3 elements:
+    1) <strong class="ms-rteForeColor-8">​Al día de la fecha, se han habilitado los IDUs r…</strong> aka getByText('Al día de la fecha, se han')
+    2) <strong class="ms-rteForeColor-8">…</strong> aka locator('div:nth-child(16) > .ms-rteForeColor-8')
+    3) <strong class="ms-rteForeColor-8">…</strong> aka locator('div:nth-child(17) > .ms-rteForeColor-8')
+
+Call log:
+[2m  - waiting for locator('strong.ms-rteForeColor-8')[22m
+
+27-02-25 02:28 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:29 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:30 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:31 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:32 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:33 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:34 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:35 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:36 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:37 [32minfo[39m: Texto encontrado: ​Al día de la fecha, se han habilitado los IDUs registrados al 01​/12/2023 inclusive (IDUS que no disponían de cita con identificador hasta el NW-2023-238450​​​​​​​​​​​​​).​
+27-02-25 02:38 [32minfo[39m: Texto encontrado: NW-2023-238450
+27-02-25 02:39 [32minfo[39m: Texto encontrado: NW-2023-238450
+27-02-25 02:40 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:41 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:42 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:43 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:44 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:45 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:46 [32minfo[39m: Idus habilitados hasta: NW-2023-238450
+27-02-25 02:47 [32minfo[39m: No se pudo scrappear el texto de la web. 
+27-02-25 02:49 [32minfo[39m: No hubo cambios de IDU's habilitados
+27-02-25 02:50 [32minfo[39m: No hubo cambios de IDU's habilitados
+27-02-25 02:51 [32minfo[39m: No hubo cambios de IDU's habilitados
+27-02-25 02:52 [32minfo[39m: No hubo cambios de IDU's habilitados
+27-02-25 02:53 [32minfo[39m: Nuevos IDU's habilitados, hasta el IDU: NW-2023-238450
+27-02-25 02:53 [32minfo[39m: Enviando mensaje de Telegram...
+27-02-25 02:53 [32minfo[39m: Mensaje de Telegram enviado.
+27-02-25 02:54 [32minfo[39m: Nuevos IDU's habilitados, hasta el IDU: NW-2023-238450
+27-02-25 02:54 [32minfo[39m: Enviando mensaje de Telegram...
+27-02-25 02:54 [32minfo[39m: Mensaje de Telegram enviado.
+27-02-25 02:57 [32minfo[39m: Nuevos IDU's habilitados, hasta el IDU: NW-2023-238450
+27-02-25 02:57 [32minfo[39m: Enviando mensaje de Telegram...
+27-02-25 02:57 [32minfo[39m: Mensaje de Telegram enviado.
+27-02-25 02:59 [32minfo[39m: Nuevos IDU's habilitados, hasta el IDU: NW-2023-238450
+27-02-25 02:59 [32minfo[39m: Enviando mensaje de Telegram...
+27-02-25 02:59 [32minfo[39m: Mensaje de Telegram enviado.
+27-02-25 02:59 [32minfo[39m: CAMBIAR IDUHARDCODEADO

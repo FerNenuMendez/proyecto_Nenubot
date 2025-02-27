@@ -48,7 +48,7 @@ export function turnoPasaporteWebBot() {
           `https://api.telegram.org/bot${
             process.env.TELEGRAM_key
           }/sendMessage?chat_id=@NenuBotRMG&text=${encodeURIComponent(
-            `🚨🚨 La página del consulado Español acaba de publicar la próxima apertura de fechas para pasaportes: ${text}. 
+            `🚨🚨🇪🇸 La página del consulado Español acaba de publicar la próxima apertura de fechas para pasaportes: ${text}. 
 ☣️ Fueron avisados por NenuBot 🤖`
           )}`
         );
