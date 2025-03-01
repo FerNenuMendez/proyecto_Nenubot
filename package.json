@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@formkit/tempo": "^0.1.2",
+    "axios": "^1.8.1",
     "dotenv": "^16.4.7",
     "node-cron": "^3.0.3",
     "playwright": "^1.50.1",
