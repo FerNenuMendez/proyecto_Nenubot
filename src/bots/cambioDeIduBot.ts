@@ -7,7 +7,7 @@ process.loadEnvFile();
 const browser = await webkit.launch();
 
 export function iduNumeroBot() {
-  cron.schedule("* * * * *", async () => {
+  cron.schedule("1 8 * * *", async () => {
     try {
       const page = await browser.newPage();
       await page.goto(
@@ -34,6 +34,16 @@ Los IDU's habilitados van hasta el: ${idu}.
         logger.info("Mensaje de Telegram enviado.");
         logger.info("CAMBIAR IDUHARDCODEADO");
       } else {
+        logger.info("Enviando mensaje de Telegram...");
+        await fetch(
+          `https://api.telegram.org/bot${
+            process.env.TELEGRAM_key
+          }/sendMessage?chat_id=@NenuBotRMG&text=${encodeURIComponent(
+            `❌❌🇪🇸 NO hay CAMBIO DE IDU's habilitados en la web. 
+☣️ Fueron avisados por NenuBot 🤖`
+          )}`
+        );
+        logger.info("Mensaje de Telegram enviado.");
         logger.info("No hay cambios de IDU's habilitados en la web.");
       }
 
